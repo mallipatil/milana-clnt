@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notes-app
+  labels:
+    app: notes-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notes-app
+  template:
+    metadata:
+      labels:
+        app: notes-app
+    spec:
+      containers:
+      - name: notes-app-deployment
+        image: myacr0612.azurecr.io/my-app
+        resources:
+          requests:
+            cpu: "100m"
+        imagePullPolicy: IfNotPresent

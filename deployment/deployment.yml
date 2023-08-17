@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notes-app
+  labels:
+    app: notes-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notes-app
+  template:
+    metadata:
+      labels:
+        app: notes-app
+    spec:
+      containers:
+        - name: client
+          image: myacr0612.azurecr.io/myclient:v3
+          command: ["npm", "start"]  # Corrected indentation
+          ports:
+           - containerPort: 4040
+          resources:
+            requests:
+              cpu: "100m"
+          imagePullPolicy: Always
+          env:
+            - name: NODE_ENV
+              value: production
+            - name: PUBLIC_URL
+              value: https://dev.milana.tech
+        - name: server
+          image: myacr0612.azurecr.io/myapi:v2
+          command: ["npm", "start"]  # Corrected indentation
+          env:
+            - name: NODE_ENV         # Add environment variables if needed
+              value: production
+          ports:
+            - containerPort: 6060
+          resources:
+            requests:
+              cpu: "100m"
+          imagePullPolicy: Always

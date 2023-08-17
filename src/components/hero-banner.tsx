@@ -1,7 +1,7 @@
 import React from "react";
 
 export const HeroBanner: React.FC = () => {
-  const logo = "https://cdn.auth0.com/blog/developer-hub/react-logo.svg";
+  const logo = "https://res.cloudinary.com/doh8qnrx5/image/upload/v1690286170/milana-Images/Brisbane_Chapter_rgpkq2.png";
 
   return (
     <div className="hero-banner hero-banner--pink-yellow">

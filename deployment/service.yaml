@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: notes-app
+spec:
+  selector:
+    app: notes-app
+  ports:
+  - name: client-port
+    port: 80
+    targetPort: 4040
+    protocol: TCP
+  - name: server-port
+    port: 81
+    targetPort: 6060
+    protocol: TCP
+
+ #type: LoadBalancer

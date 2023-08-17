@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: milana-nginx-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: nginx 
+    cert-manager.io/cluster-issuer: letsencrypt-prod1
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - dev.milana.tech
+    secretName: dev.milana.tech-tls1
+  rules:
+  - host: dev.milana.tech
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: notes-app
+            port:
+              number: 80   # Route traffic to port 80 (client)
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: notes-app
+            port:
+              number: 81   # Route traffic to port 81 (server)
