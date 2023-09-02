@@ -1,0 +1,5 @@
+REACT_APP_AUTH0_DOMAIN=https://dev-milana.au.auth0.com
+REACT_APP_AUTH0_CLIENT_ID=vKeZw4uP5Hz9PH38e3Ctzrl1621jHCcv
+REACT_APP_AUTH0_CALLBACK_URL=http://localhost:4040/callback
+REACT_APP_AUTH0_AUDIENCE=https://hello-world.example.com
+REACT_APP_API_SERVER_URL=http://localhost:6060

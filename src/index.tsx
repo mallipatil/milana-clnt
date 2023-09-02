@@ -4,6 +4,9 @@ import { BrowserRouter } from "react-router-dom";
 import { App } from "./app";
 import { Auth0ProviderWithNavigate } from "./auth0-provider-with-navigate";
 import "./styles/styles.css";
+//import reportWebVitals from './reportWebVitals';import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+//import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+
 
 const container = document.getElementById("root") as HTMLElement;
 

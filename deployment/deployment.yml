@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: myacr0612.azurecr.io/myclient:v3
+          image: myacr0612.azurecr.io/myclient:v4
           command: ["npm", "start"]  # Corrected indentation
           ports:
            - containerPort: 4040
@@ -30,7 +30,7 @@ spec:
             - name: PUBLIC_URL
               value: https://dev.milana.tech
         - name: server
-          image: myacr0612.azurecr.io/myapi:v2
+          image: myacr0612.azurecr.io/myapi:v4
           command: ["npm", "start"]  # Corrected indentation
           env:
             - name: NODE_ENV         # Add environment variables if needed

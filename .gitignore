@@ -14,7 +14,7 @@
 .idea/**/shelf
 
 # AWS User-specific
-.idea/**/aws.xml
+.idea/**/aws.xmlQ
 
 # Generated files
 .idea/**/contentModel.xml
@@ -318,3 +318,4 @@ $RECYCLE.BIN/
 .env.development.local
 .env.test.local
 .env.production.local
+
